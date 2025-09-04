@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale-scale=1.0" />
+    <title>Dashboard Analisi Excel</title>
+    
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SheetJS per l'analisi dei file Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.2.1/",
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "vite": "https://aistudiocdn.com/vite@^7.1.4",
+    "path": "https://aistudiocdn.com/path@^0.12.7"
+  }
+}
+</script>
+    <script>
+      // Custom TailwindCSS configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'brand-start': '#16a34a', // green-600
+              'brand-end': '#15803d',   // green-700
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8fafc; /* slate-50 */
+        color: #1e293b; /* slate-800 */
+      }
+      
+      ::selection {
+        background-color: #4ade80; /* green-400 */
+        color: #022c22;
+      }
+    </style>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root" class="h-screen w-screen overflow-y-auto"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
